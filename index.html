@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Needs Assessment & YPAR Curriculum with AI Integration</title>
+  <meta name="description" content="Comprehensive curriculum blending needs assessment, youth participatory action research, and AI tools for community research and advocacy." />
+
+  <style>
+    :root {
+      --primary-color: #4c6ef5;
+      --secondary-color: #40c057;
+      --accent-color: #fd7e14;
+      --dark-color: #343a40;
+      --light-color: #f8f9fa;
+      --text-color: #212529;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: #f1f3f5;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color), #228be6);
+      color: #fff;
+      padding: 2.5rem;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    
+    .date-box {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+    
+    .intro-section {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+    
+    .intro-message {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 1.5rem auto;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .assessment-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    .assessment-link {
+      flex: 1;
+      min-width: 250px;
+      max-width: 350px;
+      background-color: var(--light-color);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    
+    .assessment-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .assessment-link h3 {
+      color: var(--dark-color);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .assessment-link p {
+      margin-bottom: 1.2rem;
+      color: #495057;
+    }
+    
+    .pre-link {
+      background-color: #e3fafc;
+      border: 2px solid #15aabf;
+    }
+    
+    .post-link {
+      background-color: #ebfbee;
+      border: 2px solid #37b24d;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.9rem;
+    }
+    
+    .pre-button {
+      background-color: #15aabf;
+      color: #fff;
+    }
+    
+    .pre-button:hover {
+      background-color: #1098ad;
+      box-shadow: 0 4px 8px rgba(21, 170, 191, 0.3);
+    }
+    
+    .post-button {
+      background-color: #37b24d;
+      color: #fff;
+    }
+    
+    .post-button:hover {
+      background-color: #2f9e44;
+      box-shadow: 0 4px 8px rgba(55, 178, 77, 0.3);
+    }
+    
+    .learning-section {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+    
+    .section-title {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
+    .learning-objectives {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1rem 0 1.5rem 0;
+    }
+    
+    .objective-card {
+      flex: 1;
+      min-width: 200px;
+      background-color: var(--light-color);
+      border-left: 4px solid var(--primary-color);
+      padding: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .objective-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    .objective-card p {
+      color: #495057;
+      font-size: 0.95rem;
+    }
+    
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .session-card {
+      background-color: var(--light-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .session-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .session-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .session-card h3 .time {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      background-color: var(--accent-color);
+      color: #fff;
+      font-weight: normal;
+    }
+    
+    .session-card ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    
+    .session-card li {
+      margin-bottom: 0.5rem;
+      color: #495057;
+    }
+    
+    .session-card p {
+      margin-bottom: 1rem;
+      color: #495057;
+      font-size: 0.95rem;
+    }
+    
+    .expand-icon {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background-color: var(--primary-color);
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    
+    .detailed-content {
+      display: none;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-top: 3px solid var(--primary-color);
+    }
+    
+    .detailed-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .definition-box {
+      background-color: #e7f5ff;
+      border-left: 4px solid #4dabf7;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .definition-box h4 {
+      color: #1864ab;
+      margin-bottom: 0.5rem;
+    }
+    
+    .discussion-box {
+      background-color: #fff9db;
+      border-left: 4px solid #fcc419;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .discussion-box h4 {
+      color: #e67700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .discussion-box ul {
+      padding-left: 1.2rem;
+    }
+    
+    .discussion-box li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .activity-box {
+      background-color: #f3f0ff;
+      border-left: 4px solid #7950f2;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .activity-box h4 {
+      color: #6741d9;
+      margin-bottom: 0.5rem;
+    }
+    
+    .activity-box p {
+      margin-bottom: 0.5rem;
+    }
+    
+    .feedback-box {
+      background-color: #ebfbee;
+      border-left: 4px solid #40c057;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .feedback-box h4 {
+      color: #2b8a3e;
+      margin-bottom: 0.5rem;
+    }
+    
+    .feedback-box ul {
+      padding-left: 1.2rem;
+    }
+    
+    .feedback-box li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .team-roles {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+    
+    .role-card {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #4c6ef5;
+    }
+    
+    .role-card h3 {
+      color: #4c6ef5;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .role-card p {
+      color: #495057;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .role-card ul {
+      padding-left: 1.2rem;
+    }
+    
+    .role-card li {
+      margin-bottom: 0.5rem;
+      color: #495057;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--dark-color);
+      color: #fff;
+      border-radius: 15px;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .phase-timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 2rem 0;
+      position: relative;
+    }
+    
+    .phase-timeline::before {
+      content: '';
+      position: absolute;
+      height: 4px;
+      background-color: var(--primary-color);
+      top: 20px;
+      left: 10%;
+      right: 10%;
+      z-index: 1;
+    }
+    
+    .timeline-item {
+      position: relative;
+      width: 22%;
+      z-index: 2;
+      text-align: center;
+      min-width: 200px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .timeline-dot {
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      margin: 0 auto 0.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .timeline-content {
+      background-color: var(--light-color);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    
+    .timeline-content h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeline-content p {
+      font-size: 0.9rem;
+      color: #495057;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      header {
+        padding: 1.5rem;
+      }
+      
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .learning-objectives {
+        flex-direction: column;
+      }
+      
+      .assessment-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .assessment-link {
+        width: 100%;
+      }
+      
+      .session-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .timeline-item {
+        width: 100%;
+      }
+      
+      .phase-timeline::before {
+        left: 20px;
+        right: auto;
+        height: 100%;
+        width: 4px;
+        top: 0;
+      }
+      
+      .timeline-dot {
+        margin: 0;
+        position: absolute;
+        left: 0;
+      }
+      
+      .timeline-content {
+        margin-left: 50px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Needs Assessment & YPAR Curriculum</h1>
+      <h2>With AI Integration: Program Orientation</h2>
+      <p>Learn to research, analyze, and advocate for community needs using AI-enhanced tools</p>
+      <div class="date-box">April 9 - May 29, 2025</div>
+    </header>
+    
+    <section class="intro-section">
+      <div class="intro-message">
+        <p>Welcome to our innovative program combining Youth Participatory Action Research (YPAR) with cutting-edge AI tools. Over the next 8 weeks, you'll develop research skills, collect and analyze community data, and create compelling presentations to drive positive change.</p>
+      </div>
+      
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kOEBEEaurHg?si=68CBL1KbO7wTPuQf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      
+      <div class="assessment-links">
+        <!-- PRE-ASSESSMENT LINK -->
+        <div class="assessment-link pre-link">
+          <h3>Before We Begin</h3>
+          <p>
+            Please complete this brief pre-program assessment to help us understand 
+            your current knowledge and tailor the program to your needs.
+          </p>
+          
+          <!-- Button linking to your pre-assessment -->
+          <a href="#" target="_blank" class="button pre-button">
+            Take Pre-Assessment
+          </a>
+          
+          <!-- QR Code placeholder image -->
+          <div style="margin-top: 1rem; text-align: center;">
+            <strong>Or Scan this QR code:</strong>
+            <br>
+            <!-- Replace `qr_placeholder.png` with your actual QR code image path -->
+            <img 
+              src="Purpose & Instructions.png" 
+              alt="QR Code Placeholder" 
+              style="width: 150px; height: 150px; margin-top: 0.5rem;"
+            >
+          </div>
+        </div>      
+        
+        <!-- POST-LINK BLOCK: SHOW/HIDE RESOURCES -->
+        <div class="assessment-link post-link" style="display: flex; align-items: center; flex-direction: column;">
+          <h3>Program Resources</h3>
+          <p>Access digital resources including AI tools, templates, research guides, and collaboration platforms for this program.</p>
+          
+          <!-- Toggle Button -->
+          <button
+            id="show-resources-btn"
+            class="button post-button"
+            onclick="toggleResources()"
+            style="margin-top: 0.5rem;"
+          >
+            Show Resources
+          </button>
+          
+          <!-- Hidden Resource List -->
+          <div id="resourcesList" style="display: none; text-align: left; margin-top: 1rem;">
+            <ul style="list-style-type: disc; margin-left: 1.5rem;">
+              <li>
+                <a href="https://yparhub.berkeley.edu/" target="_blank">
+                  Why YPAR? | YPAR Hub
+                </a>
+              </li>
+              <li>
+                <a href="https://www.galaxydigital.com/blog/community-needs-assessment" target="_blank">
+                  How to Conduct a Community Needs Assessment & Examples
+                </a>
+              </li>
+              <li>
+                <a href="https://kidscodejeunesse.org/blog/teaching-ai-ethics-to-kids" target="_blank">
+                  Teaching AI Ethics to Kids
+                </a>
+              </li>
+              <!-- Add or remove more resource links as needed -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="team-roles">
+      <h2 class="section-title">Program Overview & Timeline</h2>
+      
+      <div class="phase-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-content">
+            <h4>Phase 1: April 9-17</h4>
+            <p>Training, Research Foundations & Tool Development</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-content">
+            <h4>Phase 2: April 23-May 1</h4>
+            <p>Data Collection, Outreach & Initial Analysis</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-content">
+            <h4>Phase 3: May 7-15</h4>
+            <p>AI-Enhanced Analysis & Findings Compilation</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-content">
+            <h4>Phase 4: May 21-29</h4>
+            <p>Final Report, Presentation & Sustainability Planning</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="role-card">
+        <h3>Schedule Format</h3>
+        <p><strong>Meeting Days:</strong> Tuesdays & Wednesdays</p>
+        <p><strong>Time:</strong> 2 hours per session (5:00-7:00 PM)</p>
+        <p><strong>Location:</strong> Zoom</p>
+        <p><strong>Special Event:</strong> Collaborative Main Event - Wednesday, May 15</p>
+      </div>
+      
+      <div class="role-card">
+        <h3>Program Requirements</h3>
+        <p>Complete the Membership Registration Releases</p>
+        <p>Workforce Development Forms</p>
+      </div>
+    </section>
+    
+    <section class="learning-section">
+      <h2 class="section-title">Program Goals & Outcomes</h2>
+      
+      <div class="learning-objectives">
+        <div class="objective-card">
+          <h3>Research Methodology</h3>
+          <p>Master community needs assessment and participatory research techniques with AI-enhanced tools.</p>
+        </div>
+        
+        <div class="objective-card">
+          <h3>Data Collection</h3>
+          <p>Develop practical skills in survey design, interviews, focus groups, and digital data gathering.</p>
+        </div>
+        
+        <div class="objective-card">
+          <h3>AI Analysis</h3>
+          <p>Learn to apply AI tools for data analysis, pattern recognition, and visualization of complex information.</p>
+        </div>
+        
+        <div class="objective-card">
+          <h3>Presentation Skills</h3>
+          <p>Create compelling, evidence-based presentations that drive advocacy and community change.</p>
+        </div>
+        
+        <div class="objective-card">
+          <h3>Sustainability Planning</h3>
+          <p>Develop frameworks for ongoing research and advocacy beyond the program timeframe.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="learning-section">
+      <h2 class="section-title">Program Phases & Activities</h2>
+      <p style="text-align: center; margin-bottom: 20px; color: #495057;">Click on any phase to see detailed information about sessions and activities</p>
+      
+      <div class="session-grid">
+        <!-- Phase 1 -->
+        <div class="session-card" onclick="toggleSection('phase1-details')" aria-expanded="false">
+          <h3>Phase 1: Research Foundations <span class="time">April 9-17</span></h3>
+          <p>Build foundational knowledge and skills:</p>
+          <ul>
+            <li>Introduction to YPAR methodology</li>
+            <li>AI-assisted survey design techniques</li>
+            <li>Research ethics and bias mitigation</li>
+            <li>Data collection planning</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="phase1-details" class="detailed-content">
+            <div class="definition-box">
+              <h4>Phase 1 Sessions</h4>
+              <p><strong>Session 1 (April 9):</strong> Orientation and Introduction to Research Frameworks</p>
+              <p><strong>Session 2 (April 10):</strong> Ethics in Research and Survey Design with AI Tools</p>
+              <p><strong>Session 3 (April 16):</strong> AI-Enhanced Survey Design Workshop and Tool Development</p>
+              <p><strong>Session 4 (April 17):</strong> Interview, Focus Group, and Data Collection Planning</p>
+            </div>
+            
+            <div class="discussion-box">
+              <h4>Key Concepts You'll Learn</h4>
+              <ul>
+                <li>Youth Participatory Action Research principles and applications</li>
+                <li>Quantitative vs. qualitative data collection methods</li>
+                <li>AI-assisted question generation and survey design</li>
+                <li>Data ethics, informed consent, and bias mitigation strategies</li>
+                <li>Natural Language Processing (NLP) for qualitative analysis</li>
+              </ul>
+            </div>
+            
+            <div class="activity-box">
+              <h4>Featured Activities</h4>
+              <p>During Phase 1, you'll participate in these hands-on activities:</p>
+              <ul>
+                <li>Team-building exercise: "What are the needs in our community?" using digital whiteboarding tools</li>
+                <li>Draft survey questions using AI-assisted question generation tools</li>
+                <li>Develop digital surveys with QR code distribution systems</li>
+                <li>Role-play scenarios exploring ethical dilemmas in community research</li>
+                <li>Create data collection instruments with role assignments</li>
+              </ul>
+            </div>
+            
+            <div class="feedback-box">
+              <h4>Success Metrics for Phase 1</h4>
+              <ul>
+                <li>Score 80% or higher on research concepts knowledge check</li>
+                <li>Actively participate in all group exercises</li>
+                <li>Submit three AI-enhanced survey questions approved for inclusion</li>
+                <li>Score 4/5 or higher on the ethics assessment</li>
+                <li>Receive positive peer feedback on mock interview facilitation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phase 2 -->
+        <div class="session-card" onclick="toggleSection('phase2-details')" aria-expanded="false">
+          <h3>Phase 2: Data Collection & Initial Analysis <span class="time">April 23-May 1</span></h3>
+          <p>Gather and begin processing community data:</p>
+          <ul>
+            <li>Survey distribution strategies</li>
+            <li>Community outreach techniques</li>
+            <li>Qualitative data collection</li>
+            <li>Basic data preprocessing methods</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="phase2-details" class="detailed-content">
+            <div class="definition-box">
+              <h4>Phase 2 Sessions</h4>
+              <p><strong>Session 5 (April 23):</strong> Community Outreach Strategy and Survey Launch</p>
+              <p><strong>Session 6 (April 24):</strong> Survey Distribution and Data Preprocessing Introduction</p>
+              <p><strong>Session 7 (April 30):</strong> Qualitative Data Collection and Initial NLP Analysis</p>
+              <p><strong>Session 8 (May 1):</strong> Mid-Phase Survey Review and Exploratory Data Analysis</p>
+            </div>
+            
+            <div class="discussion-box">
+              <h4>Key Focus Areas</h4>
+              <ul>
+                <li>Strategic survey distribution and community outreach</li>
+                <li>Tracking methods for outreach efforts and response rates</li>
+                <li>Interview and focus group facilitation techniques</li>
+                <li>Data preprocessing, cleaning, and exploratory analysis</li>
+                <li>Initial application of NLP tools for qualitative data</li>
+              </ul>
+            </div>
+            
+            <div class="activity-box">
+              <h4>Field Activities</h4>
+              <p>During Phase 2, you'll engage with the community through:</p>
+              <ul>
+                <li>Deploying surveys across multiple community locations</li>
+                <li>Conducting interviews or small focus groups</li>
+                <li>Creating and maintaining digital outreach tracking logs</li>
+                <li>Applying basic data cleaning and organization techniques</li>
+                <li>Beginning to identify patterns and preliminary findings</li>
+              </ul>
+            </div>
+            
+            <div class="feedback-box">
+              <h4>Success Metrics for Phase 2</h4>
+              <ul>
+                <li>Collect minimum of 30 survey responses per intern</li>
+                <li>Distribute materials at 3+ distinct community locations</li>
+                <li>Submit weekly detailed outreach tracking logs</li>
+                <li>Conduct at least one qualitative research activity</li>
+                <li>Demonstrate ability to clean and organize a data subset</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phase 3 -->
+        <div class="session-card" onclick="toggleSection('phase3-details')" aria-expanded="false">
+          <h3>Phase 3: AI-Enhanced Analysis <span class="time">May 7-15</span></h3>
+          <p>Apply advanced analysis techniques:</p>
+          <ul>
+            <li>AI-powered data analysis</li>
+            <li>Interactive visualization creation</li>
+            <li>Machine learning applications</li>
+            <li>Report writing and planning</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="phase3-details" class="detailed-content">
+            <div class="definition-box">
+              <h4>Phase 3 Sessions</h4>
+              <p><strong>Session 9 (May 7):</strong> Advanced Data Analysis and AI-Enhanced Pattern Recognition</p>
+              <p><strong>Session 10 (May 8):</strong> Advanced Visualization and Data Storytelling Workshop</p>
+              <p><strong>Session 11 (May 14):</strong> Machine Learning Applications and Report Planning</p>
+              <p><strong>Session 12 (May 15):</strong> Collaborative Main Event</p>
+            </div>
+            
+            <div class="discussion-box">
+              <h4>Advanced Techniques</h4>
+              <ul>
+                <li>Statistical analysis and AI-enhanced pattern identification</li>
+                <li>NLP for analyzing open-ended survey responses</li>
+                <li>Interactive dashboard creation for data visualization</li>
+                <li>Basic machine learning for community research applications</li>
+                <li>Data-driven storytelling and presentation design</li>
+              </ul>
+            </div>
+            
+            <div class="activity-box">
+              <h4>Analysis & Compilation Activities</h4>
+              <p>During Phase 3, you'll work with data to create:</p>
+              <ul>
+                <li>AI-enhanced analysis of community needs patterns</li>
+                <li>Interactive data visualizations and dashboard elements</li>
+                <li>Thematic analyses using AI topic classification</li>
+                <li>Report sections with AI-assisted content summarization</li>
+                <li>Presentation materials for the Collaborative Main Event</li>
+              </ul>
+            </div>
+            
+            <div class="feedback-box">
+              <h4>Success Metrics for Phase 3</h4>
+              <ul>
+                <li>Identify three major data-driven findings using AI tools</li>
+                <li>Create written summary with AI-enhanced insights</li>
+                <li>Develop at least one interactive visualization element</li>
+                <li>Complete one hands-on ML exploration exercise</li>
+                <li>Draft a section of the final report</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phase 4 -->
+        <div class="session-card" onclick="toggleSection('phase4-details')" aria-expanded="false">
+          <h3>Phase 4: Presentation & Sustainability <span class="time">May 21-29</span></h3>
+          <p>Finalize, present, and plan for the future:</p>
+          <ul>
+            <li>Report compilation and finalization</li>
+            <li>Interactive presentation design</li>
+            <li>Sustainability planning</li>
+            <li>Career pathway exploration</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="phase4-details" class="detailed-content">
+            <div class="definition-box">
+              <h4>Phase 4 Sessions</h4>
+              <p><strong>Session 13 (May 21):</strong> Final Report Compilation and Interactive Presentation Design</p>
+              <p><strong>Session 14 (May 22):</strong> Presentation Rehearsal and Sustainability Planning Workshop</p>
+              <p><strong>Session 15 (May 28):</strong> Unified Sustainability Planning</p>
+              <p><strong>Session 16 (May 29):</strong> Career Pathways and Program Conclusion</p>
+            </div>
+            
+            <div class="discussion-box">
+              <h4>Final Phase Focus</h4>
+              <ul>
+                <li>Integrating all findings into a comprehensive report</li>
+                <li>Designing effective data-driven presentations</li>
+                <li>Developing strategies for continued research and advocacy</li>
+                <li>Creating micro-projects based on research findings</li>
+                <li>Exploring career applications of your new skills</li>
+              </ul>
+            </div>
+            
+            <div class="activity-box">
+              <h4>Culminating Activities</h4>
+              <p>During Phase 4, you'll complete the program through:</p>
+              <ul>
+                <li>Finalizing the comprehensive needs assessment report</li>
+                <li>Creating interactive presentation components</li>
+                <li>Rehearsing and refining public speaking skills</li>
+                <li>Developing a sustainability roadmap for continued impact</li>
+                <li>Reflecting on personal growth and future applications</li>
+              </ul>
+            </div>
+            
+            <div class="feedback-box">
+              <h4>Success Metrics for Phase 4</h4>
+              <ul>
+                <li>Complete final report with integrated AI insights</li>
+                <li>Create interactive presentation elements that effectively communicate findings</li>
+                <li>Contribute to viable sustainability roadmap with action items</li>
+                <li>Interact effectively with stakeholders during presentations</li>
+                <li>Develop a personal career development plan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="team-roles">
+      <h2 class="section-title">Learning Opportunities & Future Applications</h2>
+      
+      <div class="role-card">
+        <h3>Research Design & Methodology</h3>
+        <p>Opportunities:</p>
+        <ul>
+          <li>Learn professional survey and interview design techniques</li>
+          <li>Master ethical research practices and informed consent protocols</li>
+          <li>Develop critical thinking skills for research question formulation</li>
+          <li>Apply these skills to academic research, program evaluation roles, or social science careers</li>
+        </ul>
+      </div>
+      
+      <div class="role-card">
+        <h3>Community Engagement & Outreach</h3>
+        <p>Opportunities:</p>
+        <ul>
+          <li>Develop strategies for effective community outreach and engagement</li>
+          <li>Learn facilitation techniques for diverse community settings</li>
+          <li>Master digital and in-person data collection methods</li>
+          <li>Apply these skills to nonprofit work, community organizing, or public health careers</li>
+        </ul>
+      </div>
+      
+      <div class="role-card">
+        <h3>AI & Data Analysis</h3>
+        <p>Opportunities:</p>
+        <ul>
+          <li>Gain hands-on experience with cutting-edge AI analysis tools</li>
+          <li>Learn data visualization techniques for complex information</li>
+          <li>Develop pattern recognition and insight identification skills</li>
+          <li>Apply these skills to data science, market research, or policy analysis careers</li>
+        </ul>
+      </div>
+      
+      <div class="role-card">
+        <h3>Advocacy & Presentation</h3>
+        <p>Opportunities:</p>
+        <ul>
+          <li>Master evidence-based storytelling and persuasive communication</li>
+          <li>Learn techniques for converting data into actionable recommendations</li>
+          <li>Develop stakeholder engagement and feedback collection skills</li>
+          <li>Apply these skills to advocacy, communications, or public policy careers</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="learning-section">
+      <h2 class="section-title">Next Steps</h2>
+      
+      <div class="learning-objectives">
+        <div class="objective-card">
+          <h3>Complete Pre-Assessment</h3>
+          <p>Take the online pre-assessment to help us understand your background and tailor the program to meet your needs.</p>
+        </div>
+        
+        <div class="objective-card">
+          <h3>Review Materials</h3>
+          <p>Explore the program resources including AI tools introduction, research ethics primer, and collaboration platforms.</p>
+        </div>
+        
+        <div class="objective-card">
+          <h3>Community Reflection</h3>
+          <p>Begin thinking about needs in your community that you're passionate about investigating and addressing.</p>
+        </div>
+        
+        <div class="objective-card">
+          <h3>First Session Prep</h3>
+          <p>Prepare for our first session on April 9th by bringing ideas, questions, and your enthusiasm for community-driven research!</p>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <p>© 2025 Needs Assessment & YPAR Curriculum with AI Integration</p>
+      <p>Questions? Contact: javier@clubstride.org | (707) 204-3160</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript for toggling session details & resources -->
+  <script>
+    function toggleSection(sectionId) {
+      const contentElement = document.getElementById(sectionId);
+      if (!contentElement) return;
+
+      // Toggle the 'active' class to show/hide the detailed content
+      contentElement.classList.toggle('active');
+      
+      // Find the parent session card and update aria-expanded
+      const parentCard = contentElement.closest('.session-card');
+      if (parentCard) {
+        const isActive = contentElement.classList.contains('active');
+        parentCard.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        
+        // Update the expand icon text
+        const expandIcon = parentCard.querySelector('.expand-icon');
+        if (expandIcon) {
+          expandIcon.textContent = isActive ? '-' : '+';
+        }
+      }
+    }
+
+    // Simple toggle function for resource list
+    function toggleResources() {
+      const resourcesDiv = document.getElementById('resourcesList');
+      const showButton = document.getElementById('show-resources-btn');
+      if (resourcesDiv.style.display === 'none') {
+        resourcesDiv.style.display = 'block';
+        showButton.textContent = 'Hide Resources';
+      } else {
+        resourcesDiv.style.display = 'none';
+        showButton.textContent = 'Show Resources';
+      }
+    }
+  </script>
+</body>
+</html>
